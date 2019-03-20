@@ -1,0 +1,11 @@
+// window.$ = require('jquery');
+require('lazysizes');
+// require('jquery-match-height');
+require('./plugins/tabs/js/tabs');
+require('./swiper');
+// require('./swiper-large');
+require('./app');
+require('./form');
+require('./plugins/mobile-menu/mobile-menu');
+require('./scroll-smooth');
+require('./map');
