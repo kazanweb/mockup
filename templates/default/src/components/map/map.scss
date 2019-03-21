@@ -19,6 +19,7 @@
 		svg {
 			display: block;
 		}
+
 	}
 
 	&__point {
@@ -27,6 +28,7 @@
 				opacity: 0;
 				transition: opacity 400ms;
 			}
+
 		}
 
 		&.active {
@@ -34,8 +36,11 @@
 				&:nth-child(2) {
 					opacity: 1;
 				}
+
 			}
+
 		}
+
 	}
 
 	&__section {
@@ -57,6 +62,7 @@
 		span {
 			color: #13cb65;
 		}
+
 	}
 
 	&__row {
@@ -64,7 +70,8 @@
 		margin-bottom: 69px;
 	}
 
-	&__field {}
+	&__field {
+	}
 
 	&__mapcheck {
 		margin: 0;
@@ -77,6 +84,7 @@
 			top: 0;
 			opacity: 0;
 		}
+
 	}
 
 	&__mapchecktext {
@@ -95,12 +103,18 @@
 			background: #2f5bea;
 			transition: width 400ms;
 		}
+
+	}
+
+	&__changetext {
+		display: none;
 	}
 
 	&__mapcheck input:checked ~ &__mapchecktext {
 		&:after {
 			width: 100%;
 		}
+
 	}
 
 	&__plan {
@@ -121,6 +135,7 @@
 		span {
 			font-weight: 300;
 		}
+
 	}
 
 	&__form {
@@ -134,6 +149,7 @@
 		letter-spacing: 0.4px;
 		color: #616161;
 	}
+
 	@media (--phone) {
 		margin: 0 -16px;
 		padding: 30px 0 32px;
@@ -144,8 +160,18 @@
 		}
 
 		&__map {
-			top: 0;
-			left: -30px;
+			width: 85px !important;
+			height: 300px !important;
+			left: auto;
+			top: 104px;
+			right: 0;
+
+			svg {
+				display: block;
+				width: 85px !important;
+				height: 300px !important;
+			}
+
 		}
 
 		&__title {
@@ -194,7 +220,9 @@
 					display: flex;
 					justify-content: center;
 				}
+
 			}
+
 		}
 
 		&__required {
@@ -204,5 +232,7 @@
 			margin-top: -101px;
 			text-align: center;
 		}
+
 	}
+
 }
