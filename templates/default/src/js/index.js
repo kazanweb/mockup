@@ -1,4 +1,5 @@
 // window.$ = require('jquery');
+require('polyfills');
 require('lazysizes');
 // require('jquery-match-height');
 require('./plugins/tabs/js/tabs');
