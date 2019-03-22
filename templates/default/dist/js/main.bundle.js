@@ -970,12 +970,14 @@ new Tabs();
 /***/ (function(module, exports, __webpack_require__) {
 
 // window.$ = require('jquery');
+__webpack_require__(/*! ./js-polyfills */ "./templates/default/src/js/js-polyfills.js");
+
 __webpack_require__(/*! lazysizes */ "./node_modules/lazysizes/lazysizes.js"); // require('jquery-match-height');
 
 
 __webpack_require__(/*! ./plugins/tabs/js/tabs */ "./templates/default/src/js/plugins/tabs/js/tabs.js");
 
-__webpack_require__(/*! ./swiper */ "./templates/default/src/js/swiper.js"); // require('./swiper-large');
+__webpack_require__(/*! ./swiper */ "./templates/default/src/js/swiper.js"); // require('./swiper-large'); 
 
 
 __webpack_require__(/*! ./app */ "./templates/default/src/js/app.js");
@@ -987,6 +989,25 @@ __webpack_require__(/*! ./plugins/mobile-menu/mobile-menu */ "./templates/defaul
 __webpack_require__(/*! ./scroll-smooth */ "./templates/default/src/js/scroll-smooth.js");
 
 __webpack_require__(/*! ./map */ "./templates/default/src/js/map.js");
+
+/***/ }),
+
+/***/ "./templates/default/src/js/js-polyfills.js":
+/*!**************************************************!*\
+  !*** ./templates/default/src/js/js-polyfills.js ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = function (callback, thisArg) {
+    thisArg = thisArg || window;
+
+    for (var i = 0; i < this.length; i++) {
+      callback.call(thisArg, this[i], i, this);
+    }
+  };
+}
 
 /***/ }),
 
