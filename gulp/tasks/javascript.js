@@ -12,7 +12,7 @@ module.exports = () => {
 					chunkFilename: 'js/[name].bundle.js'
 				},
 				mode: global.app.mode,
-				devtool: 'source',
+				devtool: 'source-map',
 				module: {
 					rules: [{
 						test: /\.js$/,
