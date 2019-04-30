@@ -6,7 +6,9 @@ var browserSync = require('browser-sync').create();
 var webpack = require('webpack');
 var gulpWebpack = require('webpack-stream');
 var tasks = require('./gulp/config/tasks');
-var template = require('./config.json').template;
+var config = require('./config.json');
+var template = config.template;
+var productionPath = config.path;
 
 global.app = {};
 global.app.gulp = gulp;
@@ -16,6 +18,7 @@ global.app.webpack = webpack;
 global.app.gulpWebpack = gulpWebpack;
 global.app.mode = process.env.NODE_ENV || 'development';
 global.app.template = template;
+global.app.path = productionPath;
 
 tasks.forEach(function (taskPath) {
 	require(taskPath)();

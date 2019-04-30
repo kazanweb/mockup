@@ -9,7 +9,8 @@ module.exports = () => {
 				output: {
 					path: path.resolve(__dirname, `${app.template}/dist`),
 					filename: 'js/[name].bundle.js',
-					chunkFilename: 'js/[name].bundle.js'
+					chunkFilename: 'js/[name].bundle.js',
+					publicPath: app.mode == 'production' ? app.path : ''
 				},
 				mode: global.app.mode,
 				devtool: 'source-map',
